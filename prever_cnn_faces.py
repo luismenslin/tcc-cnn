@@ -106,7 +106,7 @@ def predict_image(path, threshold=0.75):
 # ============================================================
 # Predição em vídeo (arquivo .mp4, .avi, etc.)
 # ============================================================
-def predict_video(video_path, threshold=0.75):
+def predict_video(video_path, threshold=0.9):
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
         print("❌ Não foi possível abrir o vídeo:", video_path)
@@ -157,7 +157,7 @@ def predict_video(video_path, threshold=0.75):
 # ============================================================
 # Predição Webcam
 # ============================================================
-def predict_webcam(cam_index=0, threshold=0.75):
+def predict_webcam(cam_index=0, threshold=0.9):
     cap = cv2.VideoCapture(cam_index)
     if not cap.isOpened():
         print("❌ Não foi possível abrir a webcam.")
